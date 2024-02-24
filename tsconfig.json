@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    // Language and Environment
+    "target": "es2022",
+    "module": "esnext",
+    "declaration": true,
+
+    // Module Resolution
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+
+    // Emit Options
+    "outDir": "dist",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    // Type Checking
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
+}
