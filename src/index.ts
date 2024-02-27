@@ -20,7 +20,7 @@ class PostgresSQLGenDelegate implements SQLGenDelegate {
 class PostgresSQLExeDelegate implements SQLExeDelegate {
     constructor(public connection: PostgresConnection, public sql: string) { }
     async exe<Shape extends Object>(bindings: ExpressionBinding[]): Promise<Shape[]> {
-        const exprs = bindings.map(b => (b[1] as any).primitiveType());
+        const exprs = bindings.map(b => ((Array.isArray(b) ? b[1] : b) as any).primitiveType());
         const results = await this.connection.pgClient.query<Shape>(this.sql, exprs);
         return results.rows;
     }
