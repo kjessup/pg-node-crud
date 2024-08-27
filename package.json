@@ -7,9 +7,7 @@
   "type": "module",
   "scripts": {
     "tsc:watch": "tsc --watch",
-    "tsc:build": "tsc",
-    "prepublish": "npx tsc",
-    "prepare": "npx tsc"
+    "tsc:build": "tsc"
   },
   "keywords": [],
   "author": "",
